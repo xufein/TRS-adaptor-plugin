@@ -20,7 +20,7 @@ public class monitor {
 			if(num != record) {
 				System.out.println("NEW!");
 				MqttClient client = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
-		        client.connect();
+		       	client.connect();
 		        MqttMessage message = new MqttMessage();
 		        message.setPayload("NEW".getBytes());
 		        client.publish("TRS", message);
